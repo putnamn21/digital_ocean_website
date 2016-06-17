@@ -70,8 +70,10 @@ app.use(require('./app/controllers/routes'));
 
 
 // listen (start app with node server.js) ======================================
+var port = process.env.PORT || 3000;
 
-app.listen(process.env.PORT || 8080); 
-console.log("App listening on port 8080");
+app.listen( port , function(){
+   console.log("App listening on port 3000");
+}); 
 
 
