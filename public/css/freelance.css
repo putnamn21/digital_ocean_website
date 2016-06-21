@@ -1,11 +1,17 @@
-* {
-  font-family: 'Robato' 'sans-serif';
+body,
+h3,
+h4,
+h5,
+p,
+a {
+  font-family: 'Helvetica';
   font-weight: 300;
 }
 h1,
 h2 {
+  font-family: 'Helvetica';
   font-weight: 100;
-  font-size: 70px;
+  font-size: 60px;
 }
 .codeBlue {
   color: #507dc4;
@@ -43,26 +49,27 @@ h2 {
   color: #fff;
   position: relative;
 }
+.banner-section .typed-span {
+  font-size: 70px;
+  color: #fff;
+}
 .banner-section .fade-animation {
   background-color: rgba(0,0,0,0.85);
+  position: relative;
 }
-.banner-section .fade-animation img:first-child {
+.banner-section img:first-child {
   position: absolute;
   top: 30px;
   left: 20px;
   width: 150px;
   height: auto;
 }
-.banner-section .fade-animation .row {
+.banner-section .typed-area {
   padding-top: 200px;
-  height: 100%;
+  height: 500px;
 }
-.banner-section .fade-animation .row h1 {
-  height: 25%;
-}
-.banner-section .fade-animation .row p {
-  margin-top: 50px;
-  margin-bottom: 50px;
+.banner-section .typed-area h1 {
+  color: #bbb;
 }
 .design-section {
   background-image: url("../img/sunset-bridge.jpg");
@@ -152,25 +159,37 @@ h2 {
   color: #fff;
   position: relative;
 }
+.contact-section .columns {
+  background-color: rgba(0,0,0,0.5);
+}
 .contact-section h2 {
   margin: 100px 0 150px 0;
 }
 .contact-section label {
   color: #fff;
 }
+.contact-section input {
+  font-size: 14px;
+}
 .contact-section input,
 .contact-section textarea {
   background-color: rgba(255,255,255,0.5);
+  color: #fff;
 }
 .contact-section input:focus,
 .contact-section textarea:focus {
+  color: #000;
+  border: 1px solid #000;
   outline: none;
-  -webkit-box-shadow: 0px;
-  box-shadow: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   background-color: rgba(255,255,255,0.8);
 }
+.contact-section .submit {
+  text-align: right;
+  padding-bottom: 15px;
+}
 .contact-section button {
-  float: right;
   padding: 12px;
   background-color: rgba(33,153,232,0.8);
   -webkit-transition: 0.15s;
@@ -186,6 +205,9 @@ h2 {
   pre {
     font-size: 10px;
   }
+  .contact-section h2 {
+    margin-bottom: 100px;
+  }
 }
 @media screen and (max-width: 640px) {
   h1,
@@ -194,6 +216,12 @@ h2 {
   }
   pre {
     font-size: 14px;
+  }
+  .banner-section .typed-span {
+    font-size: 50px;
+  }
+  .contact-section h2 {
+    margin-bottom: 50px;
   }
 }
 @-moz-keyframes blink {

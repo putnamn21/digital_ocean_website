@@ -13,7 +13,9 @@ $(document).ready(function(){
                   $("[data-text]").typed({
                     strings: WORDS,
                     typeSpeed: 20,
-                    startDelay: 2000
+                    startDelay: 2000,
+                    backDelay: 750,
+                    loop: true
                   });
                   
              }); 
@@ -101,6 +103,39 @@ $(document).ready(function(){
             $(document).scroll(function(){
                distanceFromTop = $(document).scrollTop();
                fadeShrinkElements.forEach(fadeShrinkAnimation);
+            });
+   
+            $('#contact').on('submit', function(evt){
+               evt.preventDefault();
+               var data = $('#contact').find('input, textarea');
+               $('#contact').find('span').remove();
+               var passed = true;
+               
+               data.each(function(i, elt){
+                  if (elt.value === ''){
+                     $(elt).after('<span style="color:red;">'+ $(elt).attr('name') +' is required</span>');
+                     passed = false;
+                  }
+               });
+               
+               if (passed){
+                  var dataToSubmit = $('#contact').serializeArray();
+                  $.post('/', dataToSubmit )
+                     .done(function(res){
+                        $(data).each(function(i,elt){
+                           $(elt).val('');
+                        });
+                        $('#contact').after('<div class="serverResponse">'+ res.response +'</div>');
+                        setTimeout(function(){
+                           $('.serverResponse').remove();
+                        }, 2000)
+                     })
+                     .fail(function(){
+                        $('#contact').after('<div>Form submission failed.</div>')
+                     })
+               }
+               
+               
             });
    
 });//end document load

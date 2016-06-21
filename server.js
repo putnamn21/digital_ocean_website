@@ -58,9 +58,9 @@ var User = require('./app/models/user'); // get our User model
 
 // ROUTES =========================================================================================
 
+var routes = require('./app/controllers/routes');
 
-
-app.use(require('./app/controllers/routes'));
+routes(express, app);
 
 
 

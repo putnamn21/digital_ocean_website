@@ -15,12 +15,14 @@
      <div class="banner-section window-height">
       <div class="fade-animation window-height">
         <img src="./img/Logo-finished.svg" alt="">
-         <div class="row">
-            <h1 class="text-center">The Web to power your <br/>
-               <span data-text='["eCommerce Website", "Photography Business", "Promotional efforts", "Business"]'></span> 
+         <div class="typed-area">
+            <h1 class="text-center">The Web to <br/>
+               <span class="typed-span" data-text='["Power eCommerce", "Give a Global Audience", "Bridge Systems", "Provide Innovation"]'></span> 
             </h1>
+         </div>
+         <div class="row contact-message">
             <div class="large-6 medium-8 small-10 small-centered text-center">
-               <p class="lead">The web is the most powerful tool your business has to leverage its product or service to a broader audience.</p>
+               <p class="lead">The Web is the most powerful tool your business has to leverage its product or service to a broader audience.</p>
                <hr>
                <a class="button" href='#contact'>Contact Now</a>
             </div> 
@@ -107,29 +109,29 @@ $(<span class="codeOrange">'.fade-animation'</span>)<span class="codePurple">.ea
 
    <div class="contact-section window-height">
      <div class="window-height">
+        <div class="medium-8 large-6 columns small-centered">
          <h2 class="text-center">Lets Talk</h4>
-         <div class="row">
-           <form id="contact" class="small-10 medium-6 large-5 columns small-centered">
+           <form id="contact">
                <div class="row">
                   <div class="medium-4 columns">
                      <label>Name
-                        <input type="text">
+                        <input type="text" name="Name">
                      </label>
                   </div>
                   <div class="medium-4 columns">
                      <label>Email
-                        <input type="email">
+                        <input type="email" name="Email">
                      </label>
                   </div>
                   <div class="medium-4 columns">
                      <label>Subject
-                        <input type="text">
+                        <input type="text" name="Subject">
                      </label>
                   </div>
               </div>
                <div class="row">
                   <label>Message
-                     <textarea cols="30" rows="5"></textarea>
+                     <textarea cols="30" rows="5" name="Message"></textarea>
                   </label>
                </div>
                <div class="submit">
