@@ -250,6 +250,11 @@ h2 {
     margin-top: 50px;
   }
 }
+@media screen and (max-width: 400px) {
+  pre {
+    font-size: 10px;
+  }
+}
 @media screen and (min-height: 650px) {
   .banner-section .typed-area {
     margin-top: 100px;
