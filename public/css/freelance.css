@@ -254,6 +254,9 @@ h2 {
   pre {
     font-size: 10px;
   }
+  .lead {
+    font-size: 13px;
+  }
 }
 @media screen and (min-height: 650px) {
   .banner-section .typed-area {
