@@ -59,7 +59,7 @@ $(document).ready(function(){
                    
               //only start the animation if it is scrolled more than 5% and
               // if the divs height is screen height.
-                   if(percentageScrolled<5 || elementHeight != windowHeight){
+                   if(percentageScrolled<20 || elementHeight > windowHeight*1.2){
                      $(element.element).css('transform', 'translateX(0%)'); 
                      $(element.element).css('opacity', '1');
                    }
@@ -73,7 +73,7 @@ $(document).ready(function(){
                         direction = -1;
                      } 
                         
-                     $(element.element).css('transform', 'translateX('+ (percentageScrolled-5) * direction * 4 +'%)');
+                     $(element.element).css('transform', 'translateX('+ (percentageScrolled-20) * direction * 4 +'%)');
                      $(element.element).css('opacity', (1-(percentageScrolled/70)));
                    }    
              };
