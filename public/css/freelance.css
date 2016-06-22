@@ -86,10 +86,10 @@ h2 {
 }
 .design-section h2 {
   margin-top: 30px;
-  margin-bottom: 30px;
 }
 .design-section h4 {
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .design-section .animate3d {
   position: relative;
@@ -100,12 +100,6 @@ h2 {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   margin-bottom: 50px;
-}
-.design-section .animate3d img {
-  position: absolute;
-  top: 9%;
-  left: 20%;
-  width: 60%;
 }
 .design-section .animate3d .layer {
   position: absolute;
@@ -132,6 +126,18 @@ h2 {
   overflow: hidden;
   text-align: left;
 }
+.design-section .discover-img {
+  position: absolute;
+  top: 12.5%;
+  left: 12.5%;
+  width: 75%;
+}
+.design-section .design-img {
+  position: absolute;
+  top: 9%;
+  left: 20%;
+  width: 60%;
+}
 .services-section {
   background-image: url("../img/ocean-shores.jpg");
   -webkit-background-size: cover;
@@ -144,7 +150,10 @@ h2 {
   background-color: rgba(255,255,255,0.85);
 }
 .services-section h2 {
-  margin: 30px 0 50px 0;
+  margin: 30px 0 0 0;
+}
+.services-section h4 {
+  margin-top: 50px;
 }
 .services-section img {
   height: 250px;
@@ -161,9 +170,11 @@ h2 {
 }
 .contact-section .columns {
   background-color: rgba(0,0,0,0.5);
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .contact-section h2 {
-  margin: 100px 0 150px 0;
+  padding: 50px 0 50px 0;
 }
 .contact-section label {
   color: #fff;
@@ -206,13 +217,16 @@ h2 {
     font-size: 10px;
   }
   .contact-section h2 {
-    margin-bottom: 100px;
+    padding-bottom: 30px;
   }
 }
 @media screen and (max-width: 640px) {
   h1,
   h2 {
     font-size: 40px;
+  }
+  h4 {
+    font-size: 30px;
   }
   pre {
     font-size: 14px;
@@ -221,7 +235,7 @@ h2 {
     font-size: 50px;
   }
   .contact-section h2 {
-    margin-bottom: 50px;
+    padding-bottom: 25px;
   }
 }
 @-moz-keyframes blink {

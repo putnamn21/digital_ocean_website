@@ -83,7 +83,7 @@ $(document).ready(function(){
             setToWindowHeight();
             
             $('.animate3d').animate3d({
-               distance:   15,
+               distance:   20,
                rotation:   0.3,
                startX:     0,
                startY:     0
