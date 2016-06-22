@@ -34,7 +34,7 @@ h1, h2
    animation blink 1s ease-out infinite
 .banner-section 
    background-color #000000
-   background-image url(../img/macbook.jpg)
+   background-image url(../img/freelance/macbook.jpg)
    background-size cover
    background-position top
    width 100%
@@ -49,18 +49,18 @@ h1, h2
       position relative
    img:first-child
       position absolute
-      top 30px
+      top 20px
       left 20px
       width 150px
       height auto
    .typed-area
-      padding-top 200px
-      height 500px
+      height 200px
+      margin-top 50px
       h1
          color #bbbbbb
 
 .design-section
-   background-image url(../img/sunset-bridge.jpg)
+   background-image url(../img/freelance/sunset-bridge.jpg)
    background-size cover
    background-position top
    background-color #FFFFFF
@@ -103,6 +103,7 @@ h1, h2
          height 70%
          overflow hidden
          text-align left
+         z-index 500
    .discover-img
       position absolute
       top 12.5%
@@ -115,7 +116,7 @@ h1, h2
       width 60%
          
 .services-section
-   background-image url(../img/ocean-shores.jpg)
+   background-image url(../img/freelance/ocean-shores.jpg)
    background-size cover
    background-position top
    background-color #000000
@@ -129,14 +130,14 @@ h1, h2
       height 250px
       margin 30px 0 30px 0
 .contact-section
-   background-image url(../img/waves.jpg)
+   background-image url(../img/freelance/waves.jpg)
    background-size cover
    background-position center
    color white
    position relative
-   .columns
+   .contact-box
       background-color rgba(0, 0, 0, 0.5)
-      margin-top 50px
+      margin-top 100px
       margin-bottom 50px
    h2
       padding 50px 0 50px 0
@@ -177,6 +178,8 @@ h1, h2
    .contact-section
       h2
          padding-bottom 30px
+      .contact-box
+         margin-top 75px
 // 640 and under
 @media screen and (max-width: 640px)
    h1,h2
@@ -188,7 +191,24 @@ h1, h2
    .banner-section
       .typed-span
          font-size 50px
+      img:first-child
+         top 10px
+         left 10px
+         width 100px
+      
    .contact-section
       h2
          padding-bottom 25px
-
+      .contact-box
+         margin-top 50px
+@media screen and (min-height: 650px) // 650 and larger
+   .banner-section
+      .typed-area
+         margin-top 100px
+         height 250px
+         
+@media screen and (min-height: 750px) // 750 and larger
+   .banner-section
+      .typed-area
+         margin-top 200px
+         height 300px

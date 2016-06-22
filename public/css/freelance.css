@@ -39,7 +39,7 @@ h2 {
 }
 .banner-section {
   background-color: #000;
-  background-image: url("../img/macbook.jpg");
+  background-image: url("../img/freelance/macbook.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -59,20 +59,20 @@ h2 {
 }
 .banner-section img:first-child {
   position: absolute;
-  top: 30px;
+  top: 20px;
   left: 20px;
   width: 150px;
   height: auto;
 }
 .banner-section .typed-area {
-  padding-top: 200px;
-  height: 500px;
+  height: 200px;
+  margin-top: 50px;
 }
 .banner-section .typed-area h1 {
   color: #bbb;
 }
 .design-section {
-  background-image: url("../img/sunset-bridge.jpg");
+  background-image: url("../img/freelance/sunset-bridge.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -125,6 +125,7 @@ h2 {
   height: 70%;
   overflow: hidden;
   text-align: left;
+  z-index: 500;
 }
 .design-section .discover-img {
   position: absolute;
@@ -139,7 +140,7 @@ h2 {
   width: 60%;
 }
 .services-section {
-  background-image: url("../img/ocean-shores.jpg");
+  background-image: url("../img/freelance/ocean-shores.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -160,7 +161,7 @@ h2 {
   margin: 30px 0 30px 0;
 }
 .contact-section {
-  background-image: url("../img/waves.jpg");
+  background-image: url("../img/freelance/waves.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -168,9 +169,9 @@ h2 {
   color: #fff;
   position: relative;
 }
-.contact-section .columns {
+.contact-section .contact-box {
   background-color: rgba(0,0,0,0.5);
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 .contact-section h2 {
@@ -219,6 +220,9 @@ h2 {
   .contact-section h2 {
     padding-bottom: 30px;
   }
+  .contact-section .contact-box {
+    margin-top: 75px;
+  }
 }
 @media screen and (max-width: 640px) {
   h1,
@@ -234,8 +238,28 @@ h2 {
   .banner-section .typed-span {
     font-size: 50px;
   }
+  .banner-section img:first-child {
+    top: 10px;
+    left: 10px;
+    width: 100px;
+  }
   .contact-section h2 {
     padding-bottom: 25px;
+  }
+  .contact-section .contact-box {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-height: 650px) {
+  .banner-section .typed-area {
+    margin-top: 100px;
+    height: 250px;
+  }
+}
+@media screen and (min-height: 750px) {
+  .banner-section .typed-area {
+    margin-top: 200px;
+    height: 300px;
   }
 }
 @-moz-keyframes blink {
