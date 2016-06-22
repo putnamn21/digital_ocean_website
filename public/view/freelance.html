@@ -11,10 +11,47 @@
     <link rel="stylesheet" href="./css/freelance.css">   
   </head>
   <body>
-    
-     <div class="banner-section window-height">
+  
+<!--Off Canvas Menu-->
+  <div class="off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+       <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+          <!-- Close button -->
+        <button class="close-button" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        <!-- Menu -->
+        <ul class="vertical menu">
+          <li><a href="https://github.com/putnamn21" target="_blank">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/nputnam
+" target="_blank">Linked In</a></li>
+          <li><a href="http://codepen.io/putnamn21/" target="_blank">CodePen</a></li>
+          <li><a href="/animate3d" target="_blank">Animate 3d <br> -open source project-</a></li>
+          <li class="main-site"><a href="#">Other Sites</a></li>
+          <div class="sub-sites">
+             <li><a href="https://putnamn21-done.herokuapp.com" target="_blank">Done <br> Project Management</a></li>
+             <li><a href="http://putnamn21.github.io/mailchimp-landingpage/" target="_blank">Demo <br> Mailchimp Page</a></li>
+          </div>
+          <li><a href="#">Login</a></li>
+        </ul>
+       </div>
+       <div class="off-canvas-content" data-off-canvas-content>
+<!--END Off Canvas Menu-->      
+       
+   
+       
+           
+               
+                   
+                           
+<!--Page Content-->
+   <div class="banner-section window-height">
       <div class="fade-animation window-height">
         <img src="./img/freelance/Logo-name-only-finished.svg" alt="">
+        <span class="menu-icon-wrapper">
+           <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+        </span>
          <div class="typed-area">
             <h1 class="text-center">The Web to <br/>
                <span class="typed-span" data-text='["Power eCommerce", "Give a Global Audience", "Bridge Systems", "Provide Innovation"]'></span> 
@@ -137,7 +174,15 @@ $(<span class="codeOrange">'.fade-animation'</span>)<span class="codePurple">.ea
             </form>   
          </div> 
      </div>
-   </div>      
+   </div>
+<!--End Of Page Content-->          
+          
+          
+              
+          
+      </div>
+   </div>
+</div>      
     <script src="./js/vendor/jquery.js"></script>
     <script src="./js/vendor/typed.js"></script>
     <script src="./js/vendor/foundation.min.js"></script>

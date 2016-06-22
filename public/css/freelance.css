@@ -22,6 +22,27 @@ h2 {
 .codeOrange {
   color: #ffa700;
 }
+/*---------OFF CANVAS MENU---------*/
+.off-canvas .vertical {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.off-canvas .vertical .sub-sites {
+  padding-left: 25%;
+  text-align: center;
+  font-size: 14px;
+}
+.off-canvas .vertical li {
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -ms-transition: 0.15s;
+  transition: 0.15s;
+}
+.off-canvas .vertical li:hover {
+  background-color: #b8b8b8;
+}
 .window-height {
   overflow: hidden;
 }
@@ -63,6 +84,18 @@ h2 {
   left: 20px;
   width: 150px;
   height: auto;
+}
+.banner-section .menu-icon-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  border: 1px solid #fff;
+  padding: 2px 5px 2px 5px;
+}
+.banner-section .menu-icon {
+  color: #fff;
+  width: 25px;
+  height: 15px;
 }
 .banner-section .typed-area {
   height: 200px;

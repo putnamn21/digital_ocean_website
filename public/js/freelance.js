@@ -105,6 +105,16 @@ $(document).ready(function(){
                fadeShrinkElements.forEach(fadeShrinkAnimation);
             });
    
+            $('.sub-sites').hide();
+         //toggle additional sites
+            $('.main-site').mouseenter(function(){
+               $('.sub-sites').show();
+            });
+            $('.sub-sites').mouseleave(function(){
+               $(this).hide();
+            });
+   
+         //contact form submission
             $('#contact').on('submit', function(evt){
                evt.preventDefault();
                var data = $('#contact').find('input, textarea');
@@ -133,9 +143,7 @@ $(document).ready(function(){
                      .fail(function(){
                         $('#contact').after('<div>Form submission failed.</div>')
                      })
-               }
-               
-               
+               }  
             });
    
 });//end document load

@@ -25,7 +25,7 @@
       db.on('error', console.error);
       db.once('open', function() {
         // Create your schemas and models here
-        console.log("Connected to DB!");
+        console.log("MONGO!!!!! FEED ME DATA!");
 
       });
     
@@ -73,7 +73,7 @@ routes(express, app);
 var port = process.env.PORT || 3000;
 
 app.listen( port , function(){
-   console.log("App listening on port 3000");
+   console.log("Hello Chap! App listening on port 3000");
 }); 
 
 

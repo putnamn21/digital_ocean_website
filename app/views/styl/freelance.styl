@@ -16,14 +16,28 @@ h1, h2
    font-family 'Helvetica'
    font-weight 100
    font-size 60px
-
 .codeBlue
    color codeBlue
 .codePurple
    color codePurple
 .codeOrange
    color codeOrange
-
+/*---------OFF CANVAS MENU---------*/ 
+.off-canvas
+   .vertical
+      margin-top 50px
+      margin-bottom 50px
+      text-align center
+      .sub-sites
+         padding-left 25%
+         text-align center
+         font-size 14px
+      li 
+         transition .15s
+      li:hover 
+         background-color darken(#e6e6e6, 20%)
+   
+   
 .window-height
    overflow hidden
 .fade-animation
@@ -53,6 +67,16 @@ h1, h2
       left 20px
       width 150px
       height auto
+   .menu-icon-wrapper
+      position absolute
+      top 20px
+      right 30px
+      border 1px solid white
+      padding 2px 5px 2px 5px
+   .menu-icon
+      color white
+      width 25px
+      height 15px
    .typed-area
       height 200px
       margin-top 50px
