@@ -74,7 +74,7 @@ $(document).ready(function(){
                      } 
                         
                      $(element.element).css('transform', 'translateX('+ (percentageScrolled-20) * direction * 4 +'%)');
-                     $(element.element).css('opacity', (1-(percentageScrolled/70)));
+                     $(element.element).css('opacity', (1-((percentageScrolled-20)/70)));
                    }    
              };
 
