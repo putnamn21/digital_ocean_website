@@ -98,7 +98,9 @@ $(document).ready(function(){
                distance:10,
                rotation: .3
                });
-              setToWindowHeight();
+              if ($( window ).width()> 480){
+                 setToWindowHeight();
+              } 
             }); 
          //Document Scroll
             $(document).scroll(function(){
