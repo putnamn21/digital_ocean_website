@@ -1,4 +1,4 @@
-var User = require('../models/User'); // get our User model
+var User =  require('../models/User'); // get our User model
 var validate = require('./validate.controller');
 
 module.exports = {
