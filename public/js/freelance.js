@@ -88,10 +88,14 @@ $(document).ready(function(){
                startX:     0,
                startY:     0
             });
-       
+            
+            var userLoggedIn = readCookie('access_token');
+            if (userLoggedIn){
+               $('#login').text('Logout');
+            }
 
 //EVENT functions
-
+         //Window Resize
             $(window).resize(function(event){
               $('.animate3d').animate3d({
                distance:10,
@@ -99,22 +103,57 @@ $(document).ready(function(){
                });
               setToWindowHeight();
             }); 
-
+         //Document Scroll
             $(document).scroll(function(){
                distanceFromTop = $(document).scrollTop();
                fadeShrinkElements.forEach(fadeShrinkAnimation);
             });
-   
+         //Off Canvas Side Bar
             $('.sub-sites').hide();
-         //toggle additional sites
             $('.main-site').mouseenter(function(){
                $('.sub-sites').show();
             });
             $('.sub-sites').mouseleave(function(){
                $(this).hide();
             });
+            $('#loginForm').hide();
+            $('#login').click(function(){
+               if($(this).text() === 'Login'){
+                  $('#loginForm').slideToggle();
+               } else {
+                  $(this).text('Login');
+                  eraseCookie('access_token');
+               }
+               
+            });
+              
+            //Login Submission
+               $('#loginForm').submit(function(evt){
+                  evt.preventDefault();
+                  $('#resMessage').remove();
+                  var dataToSubmit = $('#loginForm').serializeArray();
+                  $.post('/login', dataToSubmit)
+                     .done(function(res){
+                        if(res.success){
+                           $('#loginForm').after('<p id="resMessage">Welcome ' + res.user.name + '!</p>');
+                           setTimeout(function(){
+                              $('#resMessage').remove();
+                              $('#loginForm').slideToggle();
+                              $('#login').text('Logout');
+                           }, 1000)
+                        } else {
+                           console.log(res);
+                           $('#loginForm').after('<p id="resMessage">'+ res.message + '</p>')
+                        }
+                     })
+                     .fail(function(err){
+                        console.log(err);
+                        $('#loginForm').after('<p id="resMessage">Login Failed</p>')
+                     })
+                  $('#loginForm input').val('');
+               });
    
-         //contact form submission
+         //Contact form submission
             $('#contact').on('submit', function(evt){
                evt.preventDefault();
                var data = $('#contact').find('input, textarea');
@@ -130,7 +169,7 @@ $(document).ready(function(){
                
                if (passed){
                   var dataToSubmit = $('#contact').serializeArray();
-                  $.post('/', dataToSubmit )
+                  $.post('/email', dataToSubmit )
                      .done(function(res){
                         $(data).each(function(i,elt){
                            $(elt).val('');
@@ -145,5 +184,34 @@ $(document).ready(function(){
                      })
                }  
             });
+   
+   
+   
+   
+   //cookie management
+   function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+   }
+   
+   function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+   }
+
+   function eraseCookie(name) {
+       createCookie(name,"",-1);
+   }
    
 });//end document load

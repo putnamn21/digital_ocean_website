@@ -6,10 +6,9 @@
     var mongoose = require('mongoose');                     // mongoose for mongodb
     var morgan = require('morgan');             // log requests to the console (express4)
     var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
+    var cookieParser = require('cookie-parser');
     var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
-    var stylus = require('stylus');
-    var nib = require('nib');
-    var multer = require('multer');
+    var multer = require('multer');                   // used for uploading files
     var fs = require('fs');
     var upload = multer({ dest: './public/img/',
                         limits: {files:1}
@@ -37,7 +36,9 @@
     app.use(bodyParser.json());                                     // parse application/json
     app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
     app.use(methodOverride());
-
+    app.use(cookieParser());
+    app.set('views', __dirname + '/app/views/jade');
+    app.set('view engine', 'jade');
     app.set('superSecret', config.secret); // secret variable
    
 
@@ -52,16 +53,15 @@
    
 var Photo = require('./app/models/photo'); // get our Photo model
 
-var User = require('./app/models/user'); // get our User model
+
 
 
 
 // ROUTES =========================================================================================
 
-var routes = require('./app/controllers/routes');
+var routes = require('./app/controllers/routes/routes.js');
 
-routes(express, app);
-
+routes(express, app, jwt);
 
 
 

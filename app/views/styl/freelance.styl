@@ -9,6 +9,9 @@ codePurple = rgb(178, 95, 178)
 codeBlue = rgb(80, 125, 196)
 codeOrange = rgb(255, 167, 0)
 
+playkleenBlue = #006fba
+playkleenGrey = #878a8f
+
 body, h3, h4, h5, p, a
    font-family 'Helvetica'
    font-weight 300
@@ -24,18 +27,21 @@ h1, h2
    color codeOrange
 /*---------OFF CANVAS MENU---------*/ 
 .off-canvas
+   padding-bottom 30px
    .vertical
       margin-top 50px
-      margin-bottom 50px
       text-align center
       .sub-sites
-         padding-left 25%
+         padding-left 10%
+         padding-right 10%
          text-align center
          font-size 14px
       li 
          transition .15s
       li:hover 
          background-color darken(#e6e6e6, 20%)
+   #loginForm
+      margin 10px
    
    
 .window-height
@@ -67,16 +73,20 @@ h1, h2
       left 20px
       width 150px
       height auto
-   .menu-icon-wrapper
+   .menu-container
       position absolute
       top 20px
-      right 30px
+      right 20px
+      p 
+         display inline
+   .menu-icon-wrapper
+      padding 5px 5px 0px 5px
       border 1px solid white
-      padding 2px 5px 2px 5px
+      display inline-block
    .menu-icon
       color white
       width 25px
-      height 15px
+      height 22px 
    .typed-area
       height 200px
       margin-top 50px
@@ -219,6 +229,11 @@ h1, h2
          top 10px
          left 10px
          width 100px
+      .menu-container
+         top 10px
+         right 10px
+      .menu-container p
+         font-size 11px
       
    .contact-section
       h2

@@ -23,13 +23,16 @@ h2 {
   color: #ffa700;
 }
 /*---------OFF CANVAS MENU---------*/
+.off-canvas {
+  padding-bottom: 30px;
+}
 .off-canvas .vertical {
   margin-top: 50px;
-  margin-bottom: 50px;
   text-align: center;
 }
 .off-canvas .vertical .sub-sites {
-  padding-left: 25%;
+  padding-left: 10%;
+  padding-right: 10%;
   text-align: center;
   font-size: 14px;
 }
@@ -42,6 +45,9 @@ h2 {
 }
 .off-canvas .vertical li:hover {
   background-color: #b8b8b8;
+}
+.off-canvas #loginForm {
+  margin: 10px;
 }
 .window-height {
   overflow: hidden;
@@ -85,17 +91,23 @@ h2 {
   width: 150px;
   height: auto;
 }
-.banner-section .menu-icon-wrapper {
+.banner-section .menu-container {
   position: absolute;
   top: 20px;
-  right: 30px;
+  right: 20px;
+}
+.banner-section .menu-container p {
+  display: inline;
+}
+.banner-section .menu-icon-wrapper {
+  padding: 5px 5px 0px 5px;
   border: 1px solid #fff;
-  padding: 2px 5px 2px 5px;
+  display: inline-block;
 }
 .banner-section .menu-icon {
   color: #fff;
   width: 25px;
-  height: 15px;
+  height: 22px;
 }
 .banner-section .typed-area {
   height: 200px;
@@ -275,6 +287,13 @@ h2 {
     top: 10px;
     left: 10px;
     width: 100px;
+  }
+  .banner-section .menu-container {
+    top: 10px;
+    right: 10px;
+  }
+  .banner-section .menu-container p {
+    font-size: 11px;
   }
   .contact-section h2 {
     padding-bottom: 25px;

@@ -4,18 +4,16 @@ var Schema = mongoose.Schema;
 var validate = require('../controllers/validate.controller');
 
 // set up a mongoose model and pass it using module.exports
-var userSchema = new Schema({ 
+var restaurantSchema = new Schema({ 
     name: String, 
-    password: String, 
-    admin: Boolean 
+    password: String 
 });
 
-userSchema.pre('save', function(next){
+restaurantSchema.pre('save', function(next){
    this.password = validate.hash(this.password);
    next();
 });
 
+var Restaurant = mongoose.model('restaurant', restaurantSchema);
 
-var User = mongoose.model('user', userSchema);
-
-module.exports = User;
+module.exports = Restaurant;

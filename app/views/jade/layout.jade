@@ -1,0 +1,12 @@
+doctype
+html
+   head
+      title #{user.user}
+      link(rel='stylesheet', href='/css/vendor/bootstrap.min.css')
+      each val in styles
+         link(rel='stylesheet', href='#{val}')
+   body
+      block content
+      script(src='/js/vendor/jquery.js')
+      each val in scripts
+         script(src= '#{val}')
