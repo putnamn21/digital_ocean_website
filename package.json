@@ -1,7 +1,7 @@
 {
-  "name": "photogallery",
+  "name": "website",
   "version": "0.0.0",
-  "description": "Photogallery",
+  "description": "website",
   "main": "server.js",
   "author": "Nathan",
   "scripts": {

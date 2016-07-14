@@ -19,6 +19,8 @@ h1, h2
    font-family 'Helvetica'
    font-weight 100
    font-size 60px
+p
+   line-height 2
 .codeBlue
    color codeBlue
 .codePurple
@@ -163,6 +165,40 @@ h1, h2
    img 
       height 250px
       margin 30px 0 30px 0
+      
+.client-section
+   .animated
+      img 
+         animation showImage .5s forwards
+      img.play-ipad
+         animation-delay .15s
+      img.play-phone
+         animation-delay .30s
+   padding-top 100px
+   .photo-container
+      position relative
+      height 630px
+   img
+      opacity 0
+      position absolute
+      bottom 100px
+   img.play-desk
+      max-width 600px
+      left 20px
+      z-index 50
+   img.play-ipad
+      bottom 105px
+      left 0px
+      max-width 250px
+      z-index 75
+   img.play-phone
+      left 205px
+      max-width 125px
+      z-index 100
+   
+      
+      
+      
 .contact-section
    background-image url(../img/freelance/waves.jpg)
    background-size cover
@@ -204,6 +240,13 @@ h1, h2
       opacity 1
    100% 
       opacity .5
+@keyframes showImage
+   0%
+      opacity 0
+      transform translateY(20px)
+   100%
+      opacity 1
+      transform translateY(0px)
       
 // 930 and under
 @media screen and (max-width: 930px)
@@ -240,6 +283,10 @@ h1, h2
          padding-bottom 25px
       .contact-box
          margin-top 50px
+   .client-section
+      img.play-ipad, img.play-phone
+         left auto
+         right 2px
          
 @media screen and (max-width: 400px) // width 400 and under
    pre 

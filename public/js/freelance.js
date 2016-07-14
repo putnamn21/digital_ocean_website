@@ -26,9 +26,7 @@ $(document).ready(function(){
       var fadeShrinkElements = [];
       var distanceFromTop;
    
-           //Resizes the .window-height class to the screen height
-               
-               
+           //Resizes the .window-height class to the screen height         
                function setToWindowHeight (){
                //set the global window height variable and shrink elements offset from top
                  windowHeight = $(window).height();
@@ -44,7 +42,6 @@ $(document).ready(function(){
                     }
                     fadeShrinkElements.push(a);
                  });
-               
                };
 
 
@@ -107,6 +104,11 @@ $(document).ready(function(){
             $(document).scroll(function(){
                distanceFromTop = $(document).scrollTop();
                fadeShrinkElements.forEach(fadeShrinkAnimation);
+               (function(){
+                  if(distanceFromTop+windowHeight-300>$('.photo-container').offset().top){
+                     $('.photo-container').addClass('animated');
+                  }
+               })()
             });
          //Off Canvas Side Bar
             $('.sub-sites').hide();

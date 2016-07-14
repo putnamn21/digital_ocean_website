@@ -13,6 +13,9 @@ h2 {
   font-weight: 100;
   font-size: 60px;
 }
+p {
+  line-height: 2;
+}
 .codeBlue {
   color: #507dc4;
 }
@@ -205,6 +208,57 @@ h2 {
   height: 250px;
   margin: 30px 0 30px 0;
 }
+.client-section {
+  padding-top: 100px;
+}
+.client-section .animated img {
+  -webkit-animation: showImage 0.5s forwards;
+  -moz-animation: showImage 0.5s forwards;
+  -o-animation: showImage 0.5s forwards;
+  -ms-animation: showImage 0.5s forwards;
+  animation: showImage 0.5s forwards;
+}
+.client-section .animated img.play-ipad {
+  -webkit-animation-delay: 0.15s;
+  -moz-animation-delay: 0.15s;
+  -o-animation-delay: 0.15s;
+  -ms-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+.client-section .animated img.play-phone {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  -ms-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.client-section .photo-container {
+  position: relative;
+  height: 630px;
+}
+.client-section img {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: absolute;
+  bottom: 100px;
+}
+.client-section img.play-desk {
+  max-width: 600px;
+  left: 20px;
+  z-index: 50;
+}
+.client-section img.play-ipad {
+  bottom: 105px;
+  left: 0px;
+  max-width: 250px;
+  z-index: 75;
+}
+.client-section img.play-phone {
+  left: 205px;
+  max-width: 125px;
+  z-index: 100;
+}
 .contact-section {
   background-image: url("../img/freelance/waves.jpg");
   -webkit-background-size: cover;
@@ -301,6 +355,11 @@ h2 {
   .contact-section .contact-box {
     margin-top: 50px;
   }
+  .client-section img.play-ipad,
+  .client-section img.play-phone {
+    left: auto;
+    right: 2px;
+  }
 }
 @media screen and (max-width: 400px) {
   pre {
@@ -368,5 +427,93 @@ h2 {
     opacity: 0.5;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
+  }
+}
+@-moz-keyframes showImage {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes showImage {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+@-o-keyframes showImage {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+@keyframes showImage {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
